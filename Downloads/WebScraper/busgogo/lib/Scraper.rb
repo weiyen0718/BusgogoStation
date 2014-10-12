@@ -1,3 +1,5 @@
+## BUSGOGO
+
 require 'open-uri'
 require 'nokogiri'
 require 'rubygems'
@@ -73,7 +75,7 @@ puts "\n\n\nPlease check data in Output.txt file"
              key2.each do |c|
                  
                   if(v==c)
-                    puts "**************************************"
+                    puts "************************************"
                @output << "**************************************"
                     end
                  end
