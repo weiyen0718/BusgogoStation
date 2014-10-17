@@ -1,0 +1,425 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!-- InstanceBegin template="/Templates/ex.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>服務據點</title>
+<!-- InstanceEndEditable -->
+<style type="text/css">
+<!--
+body {
+	background-image: url(../images/2-1.gif);
+	margin-left: 0px;
+	margin-top: 0px;
+}
+-->
+</style>
+<script src="../Scripts/swfobject_modified.js" type="text/javascript"></script>
+<script type="text/javascript">
+<!--
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+function openwindow(id)
+{
+	window.open("gmap.asp?n_no="+id,"mywindow","location=1,status=1,scrollbars=1, width=500,height=450");
+}
+function JumpPage(page){  
+  document.form1.action="service.asp";
+  document.form1.submit();
+}
+//-->
+</script>
+<!-- InstanceBeginEditable name="head" -->
+<link href="../css/table.css" rel="stylesheet" type="text/css">
+<!-- InstanceEndEditable -->
+<link href="../css/yafen-style.css" rel="stylesheet" type="text/css">
+<link href="../css/news.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onload="MM_preloadImages('images/menu/in-over_03.gif','images/menu/in-over_05.gif','images/menu/in-over_06.gif','images/menu/in-over_07.gif','images/menu/in-over_08.gif','images/menu/in-over_09.gif','images/menu/in-over_04.gif')">
+<table width="996" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td align="left" valign="top">	<object id="FlashID" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="996" height="324">
+      <param name="movie" value="../swf/01.swf">
+      <param name="quality" value="high">
+      <param name="wmode" value="opaque">
+      <param name="swfversion" value="8.0.35.0">
+      <!-- 此 param 標籤會提示使用 Flash Player 6.0 r65 和更新版本的使用者下載最新版本的 Flash Player。如果您不想讓使用者看到這項提示，請將其刪除。 -->
+      <param name="expressinstall" value="../Scripts/expressInstall.swf">
+      <!-- 下一個物件標籤僅供非 IE 瀏覽器使用。因此，請使用 IECC 將其自 IE 隱藏。 -->
+      <!--[if !IE]>-->
+      <object type="application/x-shockwave-flash" data="../swf/01.swf" width="996" height="324">
+        <!--<![endif]-->
+        <param name="quality" value="high">
+        <param name="wmode" value="opaque">
+        <param name="swfversion" value="8.0.35.0">
+        <param name="expressinstall" value="../Scripts/expressInstall.swf">
+        <!-- 瀏覽器會為使用 Flash Player 6.0 和更早版本的使用者顯示下列替代內容。 -->
+        <div>
+          <h4>這個頁面上的內容需要較新版本的 Adobe Flash Player。</h4>
+          <p><a href="http://www.adobe.com/go/getflashplayer"><img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="取得 Adobe Flash Player" width="112" height="33"></a></p>
+        </div>
+        <!--[if !IE]>-->
+      </object>
+      <!--<![endif]-->
+    </object>
+</td>
+  </tr>
+  <tr>
+    <td align="left" valign="top"><table width="996" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="86" align="left" valign="top"><img src="../images/index/index_02.gif" width="86" height="55"></td>
+        <td width="124" align="left" valign="top"><a href="about.asp" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image21','','images/menu/in-over_03.gif',1)"><img src="images/menu/in_03.gif" name="Image21" width="124" height="55" border="0" id="Image21"></a></td>
+        <td width="115" align="left" valign="top"><a href="information.asp" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image22','','images/menu/in-over_04.gif',1)"><img src="images/menu/in_04.gif" name="Image22" width="115" height="55" border="0" id="Image22"></a></td>
+        <td width="115" align="left" valign="top"><a href="service.asp" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image23','','images/menu/in-over_05.gif',1)"><img src="images/menu/in_05.gif" name="Image23" width="115" height="55" border="0" id="Image23"></a></td>
+        <td width="115" align="left" valign="top"><a href="hire.asp" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image24','','images/menu/in-over_06.gif',1)"><img src="images/menu/in_06.gif" name="Image24" width="115" height="55" border="0" id="Image24"></a></td>
+        <td width="115" align="left" valign="top"><a href="job.asp" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image25','','images/menu/in-over_07.gif',1)"><img src="images/menu/in_07.gif" name="Image25" width="115" height="55" border="0" id="Image25"></a></td>
+        <td width="115" align="left" valign="top"><a href="contact.asp" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image26','','images/menu/in-over_08.gif',1)"><img src="images/menu/in_08.gif" name="Image26" width="115" height="55" border="0" id="Image26"></a></td>
+        <td width="142" align="left" valign="top"><a href="../index.asp" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image20','','images/menu/in-over_09.gif',1)"><img src="images/menu/in_09.gif" name="Image20" width="142" height="55" border="0" id="Image20"></a></td>
+        <td width="174" align="left" valign="top"><img src="../images/index/index_09.gif" width="69" height="55"></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td align="left" valign="top"><img src="../images/index/index_10.gif" width="996" height="27"></td>
+  </tr>
+  <tr>
+    <td align="left" valign="top" bgcolor="#FFFFFF"><table width="996" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="87" align="left" valign="top"><img src="../images/index/index_11.gif" alt="" width="87" height="179"></td>
+        <td width="154" align="left" valign="top"><table width="154" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td align="left" valign="top"><a href="ic.asp"><img src="../images/index/index_12.gif" alt="IC票證服務" width="154" height="43" border="0"></a></td>
+          </tr>
+          <tr>
+            <td height="9" align="left" valign="top"></td>
+          </tr>
+          <tr>
+            <td align="left" valign="top"><a href="Business.asp"><img src="../images/index/index_24.gif" alt="大客車租賃業務" width="154" height="43" border="0"></a></td>
+          </tr>
+          <tr>
+            <td height="9" align="left" valign="top"></td>
+          </tr>
+          <tr>
+            <td align="left" valign="top"><a href="check.asp"><img src="../images/index/index_28.gif" alt="對外大小車輛維修檢驗服務" width="154" height="43" border="0"></a></td>
+          </tr>
+          <tr>
+            <td height="9" align="left" valign="top"></td>
+          </tr>
+          <tr>
+            <td align="left" valign="top"><a href="activite.asp"><img src="../images/index/index_35.gif" alt="活動專區" width="154" height="43" border="0"></a></td>
+          </tr>
+          
+		  <tr>
+            <td height="9" align="left" valign="top"></td>
+          </tr>
+		  <tr>
+            <td align="left" valign="top">
+			<a href="http://www.hcbus.com.tw/inquery/" target="_blank">
+			<img src="../upload/LeftCom/5.gif" alt="" width="154" border="0">
+			</a>
+			</td>
+          </tr>
+		  
+		  <tr>
+            <td height="9" align="left" valign="top"></td>
+          </tr>
+		  <tr>
+            <td align="left" valign="top">
+			<a href="http://www.hcbus.com.tw/big5/information-4.asp" target="_blank">
+			<img src="../upload/LeftCom/3.gif" alt="" width="154" border="0">
+			</a>
+			</td>
+          </tr>
+		  
+		  <tr>
+            <td height="9" align="left" valign="top"></td>
+          </tr>
+		  <tr>
+            <td align="left" valign="top">
+			<a href="http://blog.xuite.net/an135843/twblog" target="_blank">
+			<img src="../upload/LeftCom/4.jpg" alt="" width="154" border="0">
+			</a>
+			</td>
+          </tr>
+		  
+        </table></td>
+        <td width="59" align="left" valign="top"> </td>
+        <td width="620" align="left" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td>
+<!-- InstanceBeginEditable name="EditRegion1" -->
+              <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                  <td align="left" valign="top"><img src="images/s-tittle_03.gif" width="605" height="67"></td>
+                </tr>
+                <tr>
+                  <td align="left" valign="middle"> </td>
+                </tr>
+                <tr>
+                  <td align="left" valign="top"><table width="93%" border="0" align="right" cellpadding="0" cellspacing="0">
+                    <tr>
+                      <td height="48" align="left" valign="top" style="background-image:url(images/information/2-4.jpg);background-repeat:no-repeat;">
+					  <form method="post" name="form1" id="form1">
+					  <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                        <tr>
+                          <td width="18%" height="10"></td>
+                          <td width="82%" height="10"></td>
+                        </tr>
+                        <tr>
+                          <td> </td>
+                          <td><select name="jumpMenu" id="jumpMenu" onchange="JumpPage(1)">
+					
+							<option value="1">新竹地區</option>
+					
+							<option value="2">竹東地區</option>
+					
+							<option value="3">關西地區</option>
+					
+							<option value="4">桃園地區</option>
+					
+							<option value="5">苗栗地區</option>
+					
+							<option value="6">國道班車資訊</option>
+					
+							<option value="7">一般公路資訊</option>
+					
+							<option value="8">新竹市區公車</option>
+					
+							<option value="9">桃園縣市區公車資訊</option>
+					
+							<option value="10">免費公車資訊</option>
+					
+                            
+                            
+                          </select></td>
+                        </tr>
+                      </table>
+					  </form>
+					  </td>
+                      </tr>
+                    <tr>
+                      <td align="center" valign="top"><table width="93%" border="0" align="center" cellpadding="0" cellspacing="0">
+                        <tr>
+                          <td align="left" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="1">
+                            <tr>
+                              <td align="left" valign="top" bgcolor="#CCCCCC"><table width="100%" border="0" cellspacing="1" cellpadding="2">
+                                <tr>
+                                  <td align="left" valign="middle" class="text14_blue" style="background-image:url(images/about/1.gif);background-repeat:no-repeat;">
+								  新竹地區
+								  </td>
+                                  </tr>
+                                <tr>
+                                  <td align="left" valign="top" bgcolor="#F5F5F5"><table width="100%" border="0" cellspacing="1" cellpadding="2">
+                                    <tr class="text1_white">
+                                      <td width="21%" align="center" valign="top" bgcolor="#2368A9">服務據點</td>
+                                      <td width="23%" align="center" valign="top" bgcolor="#2368A9">服務電話</td>
+                                      <td width="19%" align="center" valign="top" bgcolor="#2368A9">傳真電話</td>
+                                      <td width="37%" align="center" valign="top" bgcolor="#2368A9">地址</td>
+                                      </tr>
+					
+                                    <tr>
+                                      <td align="left" valign="top" bgcolor="#FFFFFF" class="map-style"><a name="%E7%B8%BD%E5%85%AC%E5%8F%B8">總公司</a></td>
+                                      <td align="left" valign="top" bgcolor="#FFFFFF" class="map-style">(03)5225151～7</td>
+                                      <td align="left" valign="top" bgcolor="#FFFFFF" class="map-style">(03)5257450</td>
+                                      <td align="left" valign="top" bgcolor="#FFFFFF" class="map-style"><a href="javascript:%20openwindow(1)">新竹市民族路16－1號</a></td>
+                                      </tr>
+					
+                                    <tr>
+                                      <td align="left" valign="top" bgcolor="#FFFFFF" class="map-style"><a name="%E6%88%BF%E5%B1%8B%E3%80%81%E5%9C%9F%E5%9C%B0%E6%8B%9B%E7%A7%9F%E3%80%81%E8%BB%8A%E5%BB%82%E5%BB%A3%E5%91%8A%E6%B4%BD%E8%AB%87">房屋、土地招租、車廂廣告洽談</a></td>
+                                      <td align="left" valign="top" bgcolor="#FFFFFF" class="map-style">(03)5225151＃236、222</td>
+                                      <td align="left" valign="top" bgcolor="#FFFFFF" class="map-style"></td>
+                                      <td align="left" valign="top" bgcolor="#FFFFFF" class="map-style"><a href="javascript:%20openwindow(2)"></a></td>
+                                      </tr>
+					
+                                    <tr>
+                                      <td align="left" valign="top" bgcolor="#FFFFFF" class="map-style"><a name="%E5%AE%A2%E6%9C%8D%E5%B0%88%E7%B7%9A">客服專線</a></td>
+                                      <td align="left" valign="top" bgcolor="#FFFFFF" class="map-style">0800-035800</td>
+                                      <td align="left" valign="top" bgcolor="#FFFFFF" class="map-style"></td>
+                                      <td align="left" valign="top" bgcolor="#FFFFFF" class="map-style"><a href="javascript:%20openwindow(4)"></a></td>
+                                      </tr>
+					
+                                    <tr>
+                                      <td align="left" valign="top" bgcolor="#FFFFFF" class="map-style"><a name="%E6%B0%B8%E9%A0%86%E6%97%85%E8%A1%8C%E7%A4%BE">永順旅行社</a></td>
+                                      <td align="left" valign="top" bgcolor="#FFFFFF" class="map-style">(03)5265150～1,(03)5236320</td>
+                                      <td align="left" valign="top" bgcolor="#FFFFFF" class="map-style">(03)5265152</td>
+                                      <td align="left" valign="top" bgcolor="#FFFFFF" class="map-style"><a href="javascript:%20openwindow(5)">新竹市民族路16號2樓</a></td>
+                                      </tr>
+					
+                                    <tr>
+                                      <td align="left" valign="top" bgcolor="#FFFFFF" class="map-style"><a name="%E9%81%8A%E8%A6%BD%E8%BB%8A%E7%A7%9F%E8%B3%83%E5%B0%88%E7%B7%9A">遊覽車租賃專線</a></td>
+                                      <td align="left" valign="top" bgcolor="#FFFFFF" class="map-style">(03)5224258</td>
+                                      <td align="left" valign="top" bgcolor="#FFFFFF" class="map-style"></td>
+                                      <td align="left" valign="top" bgcolor="#FFFFFF" class="map-style"><a href="javascript:%20openwindow(6)"></a></td>
+                                      </tr>
+					
+                                    <tr>
+                                      <td align="left" valign="top" bgcolor="#FFFFFF" class="map-style"><a name="%E6%96%B0%E7%AB%B9%E5%AE%A2%E9%81%8B%E9%A7%95%E8%A8%93%E7%8F%AD">新竹客運駕訓班</a></td>
+                                      <td align="left" valign="top" bgcolor="#FFFFFF" class="map-style">(03)5290134</td>
+                                      <td align="left" valign="top" bgcolor="#FFFFFF" class="map-style">(03)5201785</td>
+                                      <td align="left" valign="top" bgcolor="#FFFFFF" class="map-style"><a href="javascript:%20openwindow(7)">新竹市明湖路484號</a></td>
+                                      </tr>
+					
+                                    <tr>
+                                      <td align="left" valign="top" bgcolor="#FFFFFF" class="map-style"><a name="%E5%A0%B1%E5%90%8D%E5%B0%88%E7%B7%9A">報名專線</a></td>
+                                      <td align="left" valign="top" bgcolor="#FFFFFF" class="map-style">(03)5201127</td>
+                                      <td align="left" valign="top" bgcolor="#FFFFFF" class="map-style"></td>
+                                      <td align="left" valign="top" bgcolor="#FFFFFF" class="map-style"><a href="javascript:%20openwindow(8)"></a></td>
+                                      </tr>
+					
+                                    <tr>
+                                      <td align="left" valign="top" bgcolor="#FFFFFF" class="map-style"><a name="%E4%BF%AE%E8%BB%8A%E5%BB%A0(%E6%B9%96%E5%8F%A3%E5%BB%A0%E5%8D%80)">修車廠(湖口廠區)</a></td>
+                                      <td align="left" valign="top" bgcolor="#FFFFFF" class="map-style">(03)5981120</td>
+                                      <td align="left" valign="top" bgcolor="#FFFFFF" class="map-style"></td>
+                                      <td align="left" valign="top" bgcolor="#FFFFFF" class="map-style"><a href="javascript:%20openwindow(9)">新竹縣湖口鄉鳳山村中華路13號</a></td>
+                                      </tr>
+					
+                                    <tr>
+                                      <td align="left" valign="top" bgcolor="#FFFFFF" class="map-style"><a name="%E8%BB%8A%E8%BC%9B%E6%AA%A2%E9%A9%97%E5%A0%B4">車輛檢驗場</a></td>
+                                      <td align="left" valign="top" bgcolor="#FFFFFF" class="map-style">(03)5977249</td>
+                                      <td align="left" valign="top" bgcolor="#FFFFFF" class="map-style"></td>
+                                      <td align="left" valign="top" bgcolor="#FFFFFF" class="map-style"><a href="javascript:%20openwindow(10)">新竹縣湖口鄉鳳山村中華路13號</a></td>
+                                      </tr>
+					
+                                    <tr>
+                                      <td align="left" valign="top" bgcolor="#FFFFFF" class="map-style"><a name="%E4%BF%AE%E8%BB%8A%E5%BB%A0(%E7%89%9B%E5%9F%94%E5%BB%A0%E5%8D%80)">修車廠(牛埔廠區)</a></td>
+                                      <td align="left" valign="top" bgcolor="#FFFFFF" class="map-style">(03)5387500</td>
+                                      <td align="left" valign="top" bgcolor="#FFFFFF" class="map-style">(03)5387155</td>
+                                      <td align="left" valign="top" bgcolor="#FFFFFF" class="map-style"><a href="javascript:%20openwindow(11)">新竹市牛埔路200號</a></td>
+                                      </tr>
+					
+                                    <tr>
+                                      <td align="left" valign="top" bgcolor="#FFFFFF" class="map-style"><a name="%E4%BF%AE%E8%BB%8A%E5%BB%A0-%E6%9D%90%E6%96%99%E8%AA%B2">修車廠-材料課</a></td>
+                                      <td align="left" valign="top" bgcolor="#FFFFFF" class="map-style">(03)5387157</td>
+                                      <td align="left" valign="top" bgcolor="#FFFFFF" class="map-style"></td>
+                                      <td align="left" valign="top" bgcolor="#FFFFFF" class="map-style"><a href="javascript:%20openwindow(13)">新竹市牛埔路200號</a></td>
+                                      </tr>
+					
+                                    <tr>
+                                      <td align="left" valign="top" bgcolor="#FFFFFF" class="map-style"><a name="%E6%96%B0%E7%AB%B9%E7%B8%BD%E7%AB%99">新竹總站</a></td>
+                                      <td align="left" valign="top" bgcolor="#FFFFFF" class="map-style">(03)5259599</td>
+                                      <td align="left" valign="top" bgcolor="#FFFFFF" class="map-style">(03)5259499</td>
+                                      <td align="left" valign="top" bgcolor="#FFFFFF" class="map-style"><a href="javascript:%20openwindow(14)">新竹市中華路二段471號</a></td>
+                                      </tr>
+					
+                                    <tr>
+                                      <td align="left" valign="top" bgcolor="#FFFFFF" class="map-style"><a name="%E6%96%B0%E7%AB%B9%E7%B8%BD%E7%AB%99-%E6%96%B0%E7%AB%B9%E5%8C%97%E7%AB%99">新竹總站-新竹北站</a></td>
+                                      <td align="left" valign="top" bgcolor="#FFFFFF" class="map-style">(03)5218841</td>
+                                      <td align="left" valign="top" bgcolor="#FFFFFF" class="map-style"></td>
+                                      <td align="left" valign="top" bgcolor="#FFFFFF" class="map-style"><a href="javascript:%20openwindow(15)">新竹市中華路二段415號</a></td>
+                                      </tr>
+					
+                                    <tr>
+                                      <td align="left" valign="top" bgcolor="#FFFFFF" class="map-style"><a name="%E6%96%B0%E7%AB%B9%E7%B8%BD%E7%AB%99-%E6%B8%85%E5%A4%A7%E5%94%AE%E7%A5%A8%E7%AA%97%E5%8F%A3">新竹總站-清大售票窗口</a></td>
+                                      <td align="left" valign="top" bgcolor="#FFFFFF" class="map-style">(03)5737836</td>
+                                      <td align="left" valign="top" bgcolor="#FFFFFF" class="map-style"></td>
+                                      <td align="left" valign="top" bgcolor="#FFFFFF" class="map-style"><a href="javascript:%20openwindow(16)">新竹市光復路二段清大售票亭</a></td>
+                                      </tr>
+					
+                                    <tr>
+                                      <td align="left" valign="top" bgcolor="#FFFFFF" class="map-style"><a name="%E5%B8%82%E5%8D%80%E5%85%AC%E8%BB%8A%E7%B8%BD%E7%AB%99">市區公車總站</a></td>
+                                      <td align="left" valign="top" bgcolor="#FFFFFF" class="map-style">(03)5268599</td>
+                                      <td align="left" valign="top" bgcolor="#FFFFFF" class="map-style">(03)5280500</td>
+                                      <td align="left" valign="top" bgcolor="#FFFFFF" class="map-style"><a href="javascript:%20openwindow(17)">新竹市民族路16－1號</a></td>
+                                      </tr>
+					
+                                    <tr>
+                                      <td align="left" valign="top" bgcolor="#FFFFFF" class="map-style"><a name="%E5%B8%82%E5%8D%80%E5%85%AC%E8%BB%8A-%E6%B0%91%E6%97%8F%E8%B7%AF%E7%AB%99">市區公車-民族路站</a></td>
+                                      <td align="left" valign="top" bgcolor="#FFFFFF" class="map-style">(03)5225151#125</td>
+                                      <td align="left" valign="top" bgcolor="#FFFFFF" class="map-style"></td>
+                                      <td align="left" valign="top" bgcolor="#FFFFFF" class="map-style"><a href="javascript:%20openwindow(18)">新竹市民族路16號</a></td>
+                                      </tr>
+					
+                                    <tr>
+                                      <td align="left" valign="top" bgcolor="#FFFFFF" class="map-style"><a name="%E6%96%B0%E7%AB%B9%E4%BF%9D%E9%A4%8A%E5%A0%B4">新竹保養場</a></td>
+                                      <td align="left" valign="top" bgcolor="#FFFFFF" class="map-style">(03)5387159</td>
+                                      <td align="left" valign="top" bgcolor="#FFFFFF" class="map-style"></td>
+                                      <td align="left" valign="top" bgcolor="#FFFFFF" class="map-style"><a href="javascript:%20openwindow(19)">新竹市牛埔路200號</a></td>
+                                      </tr>
+					
+                                    <tr>
+                                      <td align="left" valign="top" bgcolor="#FFFFFF" class="map-style"><a name="%E7%94%A2%E6%A5%AD%E5%B7%A5%E6%9C%83">產業工會</a></td>
+                                      <td align="left" valign="top" bgcolor="#FFFFFF" class="map-style">(03)5230399</td>
+                                      <td align="left" valign="top" bgcolor="#FFFFFF" class="map-style"></td>
+                                      <td align="left" valign="top" bgcolor="#FFFFFF" class="map-style"><a href="javascript:%20openwindow(20)">新竹市中華路二段471號2樓</a></td>
+                                      </tr>
+					
+                                    <tr>
+                                      <td align="left" valign="top" bgcolor="#FFFFFF" class="map-style"><a name="%E6%B9%96%E5%8F%A3%E7%AB%99">湖口站</a></td>
+                                      <td align="left" valign="top" bgcolor="#FFFFFF" class="map-style">(03)5992158</td>
+                                      <td align="left" valign="top" bgcolor="#FFFFFF" class="map-style"></td>
+                                      <td align="left" valign="top" bgcolor="#FFFFFF" class="map-style"><a href="javascript:%20openwindow(21)">新竹縣湖口鄉中山路二段90號</a></td>
+                                      </tr>
+					
+                                   
+                                    </table></td>
+                                  </tr>
+                                </table></td>
+                              </tr>
+                            </table></td>
+                          </tr>
+                        <tr>
+                          <td align="left" valign="top"> </td>
+                          </tr>
+                        
+                        
+                        </table></td>
+                      </tr>
+                    <tr>
+                      <td align="center" valign="top"> </td>
+                      </tr>
+                    </table></td>
+                </tr>
+                <tr>
+                  <td align="left" valign="top"> </td>
+                </tr>
+              </table>
+               <!-- InstanceEndEditable -->
+</td>
+          </tr>
+        </table></td>
+        <td width="89" align="left" valign="top"><img src="../images/index/index_16.gif" alt="" width="89" height="152"></td>
+      </tr>
+    </table></td>
+  </tr>
+  
+<tr>
+    <td height="65" align="center" valign="middle" bgcolor="#F3F3F3"><table width="80%" border="0">
+      <tr>
+        <td height="25" align="center" valign="middle">地址：新竹市民族路16-1號                 TEL:03-5225151~8                 FAX:03-5257450<br>
+</td>
+      </tr>
+      <tr>
+        <td height="25" align="center" valign="middle">本站圖文係新竹汽車客運股份有限公司版權所有‧盜用必究  IE8.0獲得最佳瀏覽效果</td>
+      </tr>
+    </table></td>
+  </tr>
+ 
+</table>
+<script type="text/javascript">
+<!--
+swfobject.registerObject("FlashID");
+//-->
+</script>
+</body>
+<!-- InstanceEnd -->
+</html>

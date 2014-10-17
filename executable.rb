@@ -1,8 +1,6 @@
-require "busgogo/version"
-require_relative 'Scraper'
+# User Interface (takes user input from the user at the command line)
 
-module Busgogo
-  
+require_relative 'Scraper'
 
 usage = "\n Usage : executable [number] .\n\n Number 1 : Hsinchu bus\' stations. \n Number 2 : Get bus stataion names.\n Number 3 : Get bus stataion information in detail.\n Number 4 : Get file (bus stataion information)bus."
 fail ArgumentError, usage if ARGV.count != 1
@@ -25,6 +23,4 @@ case number
   
   else
     puts '(1~4) Error input : you key in No ' << number.to_s
-end
-
 end
