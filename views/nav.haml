@@ -1,0 +1,15 @@
+#header_wrapper
+  %nav{:id => 'menu'}
+    %ul
+      - if current_page?
+        %li{:class => "current_page_item"}
+          %a{:href => '/', :id => 'home'} Home
+      - else
+        %li
+          %a{:href => '/', :id => 'home'} Home
+      - if current_page?('station')
+        %li{:class => 'current_page_item'}
+          %a{:href => '/station', :id => 'station'} Station
+      - else
+        %li
+          %a{:href => '/station', :id => 'station'} Station

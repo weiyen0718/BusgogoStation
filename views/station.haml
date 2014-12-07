@@ -1,0 +1,25 @@
+.container
+
+  %form{action: '/station', method: 'get', id: 'user-form'}
+    %input{type: 'text', name: 'num', id: 'home-form-username', placeholder: 'num here...'}
+    %input{type: 'submit', id: 'home-form-submit', class: 'submit', value: 'submit'}
+  %p
+
+  -if @station
+    %table{class: 'center'}
+      %tbody
+        %tr
+          %th num
+          %th station
+        %tr
+          %td
+            =@station['station']
+          %td
+            =@station['profiles']
+
+        / -@station['badge'].each do |badge|
+        /   %tr
+        /     %td
+        /       = badge['num']
+        /     %td{width: '300'}
+        /       = badge['station']
