@@ -6,6 +6,7 @@ gem 'busgogo'
 gem 'json'
 gem 'haml'
 gem 'sinatra-flash'
+gem 'httparty'
 
 group :development do
 gem 'tux'

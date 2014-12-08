@@ -7,6 +7,7 @@ require 'haml'
 require 'sinatra/flash'
 
 require 'httparty'
+#require './tutorials'
 
 class Bus < Sinatra::Base
 	enable :sessions
@@ -24,6 +25,27 @@ class Bus < Sinatra::Base
       API_BASE_URI= 'https://busgogostations.herokuapp.com'
       API_VER = '/api/v2/'
 	helpers do
+def user
+num = params[:num].to_i
+# @station = user
+return nil unless num
+profile_after={
+'station' => num,
+'profiles' => 'not yet found'
+}
+begin
+# WebScraper::Scraper.busstation.each do |value|
+# profile_after['profiles'].push('station' => value)
+# end
+# profile_after
+buses = WebScraper.new
+stations = buses.busstation
+profile_after['profiles'] = stations[num]
+rescue
+return nil
+end
+profile_after
+end
 		def current_page?(path = ' ')
 			path_info = request.path_info
 			path_info += ' ' if path_info == '/'
@@ -52,8 +74,9 @@ class Bus < Sinatra::Base
 
 
 	get '/station/:num' do
+		@num = user
 		@station = HTTParty.get api_url("station/#{@num}.json")
-		@num = params[:num]
+		
 		if @num && @station.nil?
 			flash[:notice] = 'station number #{num} not found' if @station.nil?
 			redirect '/station'
@@ -117,6 +140,8 @@ end
 post '/tutorials' do
 request_url = "#{API_BASE_URI}/api/v2/tutorials"
 num = params[:num].split("\r\n")
+
+#num=num.to_i
 station = params[:station].split("\r\n")
 params_h = {
 num: num,
@@ -161,5 +186,5 @@ flash[:notice] = 'record of tutorial deleted'
 redirect '/tutorials'
 end
 
-end
+#end
 end
