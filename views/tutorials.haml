@@ -1,0 +1,43 @@
+.container
+  %form{:action => '/tutorials', :method => 'post', :id => 'check-form'}
+    %dl{class: 'user-input'}
+      %dt
+        %label{:for => 'check-num'} Num
+      %dd
+        - if @num
+          = find_and_preserve "<textarea cols=\"35\" id=\"check-num\" name=\"num\" rows=\"10\">#{@num.join("\r\n")}</textarea>"
+        - else
+          %textarea{:id => 'check-num', :name => 'num', :rows => '10', :cols => '35'}
+    %dl{class: 'user-input'}
+      %dt
+        %label{:for => 'check-station'} Statiom names
+      %dd
+        - if @num
+          = find_and_preserve "<textarea cols=\"35\" id=\"check-station\" name=\"station\" rows=\"10\">#{@station.join("\r\n")}</textarea>"
+        - else
+          %textarea{:id => 'check-station', :name => 'station', :rows => '10', :cols => '35'}
+    .float-clear
+      %input{:type => 'submit', :value => 'submit', :id => 'check-submit', :class => 'submit'}
+  %form{:action => "/tutorials/#{@id}", :method => 'post', :id => 'delete-form'}
+    - if @action == :update
+      %input{:type => 'submit', :name => '_method', :value => 'delete', :class => 'delete'}
+  - if @results
+    %h1 Results
+    %table{class: 'center'}
+      %tbody
+        %tr
+          %th Username
+          %th Station Missing
+        - @results.each do |user, missing|
+          %tr
+            %td
+              = user
+              %br
+              - if missing
+                = "#{missing.count} Station missing"
+              - else
+                = "no station missing"
+            %td
+              = missing.join ", "
+  - else
+    %p "Enter search criteria above"
