@@ -1,13 +1,12 @@
+require 'bundler/setup'
 require 'sinatra/base'
 require 'json'
-
 
 require 'bundler/setup'
 require 'haml'
 require 'sinatra/flash'
 
 require 'httparty'
-#require './tutorials'
 
 class Bus < Sinatra::Base
 	enable :sessions
@@ -61,7 +60,7 @@ class Bus < Sinatra::Base
 	end
 
 	get '/station' do
-		@num = params[:num].to_i
+		@num = params[:num]
 		if @num
 			redirect "/station/#{@num}"
 			return nil
@@ -72,15 +71,31 @@ class Bus < Sinatra::Base
 
 
 	get '/station/:num' do
-		@num = params[:num].to_i
-		@station = HTTParty.get api_url("station/#{@num}.json")
+		@num = params[:num]
+      @station = HTTParty.get api_url("station/#{@num}.json")
+		#@station= HTTParty.get('https://busgogostations.herokuapp.com/api/v2/station/:num.json')
+      #@station=JSON.parse(sta)
+               # @station = s.parsed_response
+                @station.each do |item| 
+                @num = params[:num].to_i
+						if item['station']==@num
+                   @re=item['station']
+						end
+					  end
+      #@station have thing
+     #	@station=JSON.parse(sta)
+      #@test2=JSON.parse(@station.station)
+		#logger.info "num: #{@test}"
+		#logger.info "num: #{@station}"
+		
 		
 		if @num && @station.nil?
 			flash[:notice] = 'station number #{num} not found' if @station.nil?
 			redirect '/station'
 		end
-		logger.info "num: #{@station['station']}  name: #{@station['profiles']}"
-
+                
+		logger.info "num: #{@station['station'].to_i}  name: #{@station['profiles']}"
+               
 		haml :station
 	end
 

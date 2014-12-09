@@ -13,9 +13,13 @@
           %th station
         %tr
           %td
-            =@station['station']
+            =@num                              
+            /=@station['station']
           %td
-            =@station['profiles']
+            =@station
+            /=@station['profiles']
+            /=@re
+
 
         / -@station['badge'].each do |badge|
         /   %tr
