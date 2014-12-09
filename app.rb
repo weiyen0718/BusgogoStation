@@ -61,7 +61,7 @@ class Bus < Sinatra::Base
 	end
 
 	get '/station' do
-		@num = params[:num]
+		@num = params[:num].to_i
 		if @num
 			redirect "/station/#{@num}"
 			return nil
@@ -137,7 +137,7 @@ end
 
 post '/tutorials' do
 request_url = "#{API_BASE_URI}/api/v2/tutorials"
-num = params[:num].to_i
+num = params[:num].split("\r\n")
 #num=num
 station = params[:station].split("\r\n")
 params_h = {
