@@ -21,7 +21,8 @@ class Bus < Sinatra::Base
       set :session_secret, "something" # ignore if not using shotgun in    development
       end
    
-      API_BASE_URI= 'https://busgogostations.herokuapp.com'
+      #API_BASE_URI= 'https://busgogostations.herokuapp.com'
+		API_BASE_URI= 'http://127.0.0.1:9292'
       API_VER = '/api/v2/'
 	helpers do
 #def user
@@ -73,15 +74,17 @@ class Bus < Sinatra::Base
 	get '/station/:num' do
 		@num = params[:num]
       @station = HTTParty.get api_url("station/#{@num}.json")
+		#@station = JSON.parse(@station)
 		#@station= HTTParty.get('https://busgogostations.herokuapp.com/api/v2/station/:num.json')
       #@station=JSON.parse(sta)
                # @station = s.parsed_response
-                @station.each do |item| 
-                @num = params[:num].to_i
-						if item['station']==@num
-                   @re=item['station']
+                #@station.each do |item| 
+                	@num = params[:num]
+						#logger.info "STATION: #{item['station']} : item['station'].class"
+						if @station['station'] == @num
+                   @re=@station['station']
 						end
-					  end
+					  #end
       #@station have thing
      #	@station=JSON.parse(sta)
       #@test2=JSON.parse(@station.station)
