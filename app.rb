@@ -74,23 +74,11 @@ class Bus < Sinatra::Base
 	get '/station/:num' do
 		@num = params[:num]
       @station = HTTParty.get api_url("station/#{@num}.json")
-		#@station = JSON.parse(@station)
-		#@station= HTTParty.get('https://busgogostations.herokuapp.com/api/v2/station/:num.json')
-      #@station=JSON.parse(sta)
-               # @station = s.parsed_response
-                #@station.each do |item| 
-                	@num = params[:num]
-						#logger.info "STATION: #{item['station']} : item['station'].class"
-						if @station['station'] == @num
-                   @re=@station['station']
-						end
-					  #end
-      #@station have thing
-     #	@station=JSON.parse(sta)
-      #@test2=JSON.parse(@station.station)
-		#logger.info "num: #{@test}"
-		#logger.info "num: #{@station}"
 		
+						#logger.info "STATION: #{item['station']} : item['station'].class"
+						#if @station['station'] == @num
+                  # @re=@station['station']
+						#end
 		
 		if @num && @station.nil?
 			flash[:notice] = 'station number #{num} not found' if @station.nil?
@@ -156,8 +144,10 @@ end
 post '/tutorials' do
 request_url = "#{API_BASE_URI}/api/v2/tutorials"
 num = params[:num].split("\r\n")
-#num=num
+#@num.to_i
 station = params[:station].split("\r\n")
+
+
 params_h = {
 num: num,
 station: station
@@ -165,7 +155,10 @@ station: station
 options = { body: params_h.to_json,
 headers: { 'Content-Type' => 'application/json' }
 }
+
+logger.info "!!!!!!!!!!!!!!! #{request_url} #{options}"
 result = HTTParty.post(request_url, options)
+logger.info "!!!!!!!!!!!!!!! #{result}"
 if (result.code != 200)
 flash[:notice] = 'num not found'
 redirect '/tutorials'
