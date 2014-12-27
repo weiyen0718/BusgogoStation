@@ -158,7 +158,7 @@ headers: { 'Content-Type' => 'application/json' }
 
 logger.info "!!!!!!!!!!!!!!! #{request_url} #{options}"
 result = HTTParty.post(request_url, options)
-logger.info "!!!!!!!!!!!!!!! #{result}"
+logger.info "@@@@@@@@@@@@ result  catch :#{result}"
 if (result.code != 200)
 flash[:notice] = 'num not found'
 redirect '/tutorials'

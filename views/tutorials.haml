@@ -34,7 +34,8 @@
               = user
               %br
               - if missing
-                = "#{missing.count} Station missing"
+                = "no station missing"
+                /= "#{missing.count} Station missing"
               - else
                 = "no station missing"
             %td
