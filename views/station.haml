@@ -11,19 +11,20 @@
         %tr
           %th num
           %th station
+          %th address
+          %th
         %tr
           %td
             =@num                              
-            /=@station['station']
+         
           %td
             =@station['profiles']
-            /=@station['profiles']
-            /=@re
-
-
-        / -@station['badge'].each do |badge|
-        /   %tr
-        /     %td
-        /       = badge['num']
-        /     %td{width: '300'}
-        /       = badge['station']
+        
+        -@address.each do |data|
+          %tr
+          %td
+          %td
+          %td
+            = data['stop']
+          %td
+            = data['adr']
