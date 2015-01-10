@@ -161,12 +161,14 @@ headers: { 'Content-Type' => 'application/json' }
 #logger.info "!!!!!!!!!!!!!!! #{request_url} #{options}"
 result = HTTParty.post(request_url, options)
 logger.info "@@@@@@@@@@@@ result  catch :#{result}"
+logger.info result.code
 if (result.code != 200)
 flash[:notice] = 'num not found'
 redirect '/tutorials'
 return nil
 end
 id = result.request.last_uri.path.split('/').last
+logger.info id
 session[:result] = result.to_json
 session[:num] = num
 session[:station] = station
