@@ -22,7 +22,7 @@ class Bus < Sinatra::Base
       end
    
       #API_BASE_URI= 'https://busgogostations.herokuapp.com'
-		API_BASE_URI= 'http://127.0.0.1:9292'
+		API_BASE_URI= 'http://127.0.0.1:3000'
       API_VER = '/api/v2/'
 	helpers do
 #def user
@@ -74,18 +74,14 @@ class Bus < Sinatra::Base
 	get '/station/:num' do
 		@num = params[:num]
       @station = HTTParty.get api_url("station/#{@num}.json")
-		
-						#logger.info "STATION: #{item['station']} : item['station'].class"
-						#if @station['station'] == @num
-                  # @re=@station['station']
-						#end
-		
+		@address = @station['data']
+					
 		if @num && @station.nil?
 			flash[:notice] = 'station number #{num} not found' if @station.nil?
 			redirect '/station'
 		end
                 
-		logger.info "num: #{@station['station'].to_i}  name: #{@station['profiles']}"
+		logger.info "num: #{@station['station'].to_i}  name: #{@station['profiles']}  address: #{@station['data']}" 
                
 		haml :station
 	end
@@ -144,13 +140,15 @@ end
 post '/tutorials' do
 request_url = "#{API_BASE_URI}/api/v2/tutorials"
 num = params[:num].split("\r\n")
-#@num.to_i
 station = params[:station].split("\r\n")
+logger.info "!!!!!!!!!!!!!!! #{num} #{station}"
+address = params[:address].split("\r\n")
 
-
+logger.info "!!!!!!!!!!!!!!! #{request_url} #{options}"
 params_h = {
 num: num,
-station: station
+station: station,
+address: address
 }
 options = { body: params_h.to_json,
 headers: { 'Content-Type' => 'application/json' }
@@ -168,6 +166,7 @@ id = result.request.last_uri.path.split('/').last
 session[:result] = result.to_json
 session[:num] = num
 session[:station] = station
+session[:address] = address
 session[:action] = :create
 redirect "/tutorials/#{id}"
 end
@@ -177,6 +176,8 @@ session[:action] = nil
 @results = JSON.parse(session[:result])
 @num = session[:num]
 @station = session[:station]
+@address = session[:address]
+
 else
 request_url = "#{API_BASE_URI}/api/v2/tutorials/#{params[:id]}"
 options = { headers: { 'Content-Type' => 'application/json' } }
