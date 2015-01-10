@@ -73,9 +73,15 @@ class Bus < Sinatra::Base
 
 	get '/station/:num' do
 		@num = params[:num]
+logger.info "!!!!#{@num}"
       @station = HTTParty.get api_url("station/#{@num}.json")
+logger.info "!!!!#{@station['profiles']}"
 		@address = @station['data']
-					
+						#logger.info "STATION: #{item['station']} : item['station'].class"
+						#if @station['station'] == @num
+                  # @re=@station['station']
+						#end
+		
 		if @num && @station.nil?
 			flash[:notice] = 'station number #{num} not found' if @station.nil?
 			redirect '/station'
@@ -141,10 +147,8 @@ post '/tutorials' do
 request_url = "#{API_BASE_URI}/api/v2/tutorials"
 num = params[:num].split("\r\n")
 station = params[:station].split("\r\n")
-logger.info "!!!!!!!!!!!!!!! #{num} #{station}"
 address = params[:address].split("\r\n")
-
-logger.info "!!!!!!!!!!!!!!! #{request_url} #{options}"
+#logger.info "!!!!!!!!!!!!!!! #{num} #{station} #{address}"
 params_h = {
 num: num,
 station: station,
@@ -154,7 +158,7 @@ options = { body: params_h.to_json,
 headers: { 'Content-Type' => 'application/json' }
 }
 
-logger.info "!!!!!!!!!!!!!!! #{request_url} #{options}"
+#logger.info "!!!!!!!!!!!!!!! #{request_url} #{options}"
 result = HTTParty.post(request_url, options)
 logger.info "@@@@@@@@@@@@ result  catch :#{result}"
 if (result.code != 200)
