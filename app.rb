@@ -21,8 +21,8 @@ class Bus < Sinatra::Base
       set :session_secret, "something" # ignore if not using shotgun in    development
       end
    
-      #API_BASE_URI= 'https://busgogostations.herokuapp.com'
-		API_BASE_URI= 'http://127.0.0.1:3000'
+      API_BASE_URI= 'http://busgogo-dynamo.herokuapp.com'
+		 # API_BASE_URI= 'http://127.0.0.1:3000'
       API_VER = '/api/v2/'
 	helpers do
 #def user
@@ -148,7 +148,7 @@ class Bus < Sinatra::Base
 		num = params[:num].split("\r\n")
 		station = params[:station].split("\r\n")
 		address = params[:address].split("\r\n")
-		#logger.info "!!!!!!!!!!!!!!! #{num} #{station} #{address}"
+		logger.info "!!!!!!!!!!!!!!! #{num} #{station} #{address}"
 		params_h = {
 			num: num,
 			station: station,
