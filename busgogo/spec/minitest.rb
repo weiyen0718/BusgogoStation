@@ -1,6 +1,6 @@
 require 'minitest/autorun'
 require 'minitest/rg'
-require_relative './../lib/scraper.rb'
+require './lib/busgogo.rb'
 
 teststation = {
   '1' => '新竹地區',

@@ -1,4 +1,4 @@
-require_relative '../lib/scraper.rb'
+require 'busgogo'
 usage = []
 usage << "\n Usage : executable [number] .\n"
 usage << "\nNumber 1 : Hsinchu bus\' stations."
