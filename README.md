@@ -10,16 +10,21 @@ Take the link() to use our service.
 
 ### Sevice
 1)Home
+
 2)Station
+
 3)Tutorial
 
-#### Station
+##### 1)Station
 Type area num,service will return all stop name and address in that area.
 
-#### Tutorial
+##### 2)Tutorial
 Type area num,area name,address
 if not found,restart the page
 if found,it will return the result
+
+
+
 
 
 ### API Usages
