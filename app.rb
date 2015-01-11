@@ -73,9 +73,9 @@ class Bus < Sinatra::Base
 
 	get '/station/:num' do
 		@num = params[:num]
-logger.info "!!!!#{@num}"
-      @station = HTTParty.get api_url("station/#{@num}.json")
-logger.info "!!!!#{@station['profiles']}"
+		logger.info "!!!!#{@num}"
+        @station = HTTParty.get api_url("station/#{@num}.json")
+		logger.info "!!!!#{@station['profiles']}"
 		@address = @station['data']
 						#logger.info "STATION: #{item['station']} : item['station'].class"
 						#if @station['station'] == @num
@@ -137,69 +137,74 @@ logger.info "!!!!#{@station['profiles']}"
 #		end
 #	end
 
-get '/tutorials' do
-@action = :create
-haml :tutorials
-end
+	get '/tutorials' do
+		@action = :create
+		haml :tutorials
+	end
 
 
-post '/tutorials' do
-request_url = "#{API_BASE_URI}/api/v2/tutorials"
-num = params[:num].split("\r\n")
-station = params[:station].split("\r\n")
-address = params[:address].split("\r\n")
-#logger.info "!!!!!!!!!!!!!!! #{num} #{station} #{address}"
-params_h = {
-num: num,
-station: station,
-address: address
-}
-options = { body: params_h.to_json,
-headers: { 'Content-Type' => 'application/json' }
-}
+	post '/tutorials' do
+		request_url = "#{API_BASE_URI}/api/v2/tutorials"
+		num = params[:num].split("\r\n")
+		station = params[:station].split("\r\n")
+		address = params[:address].split("\r\n")
+		#logger.info "!!!!!!!!!!!!!!! #{num} #{station} #{address}"
+		params_h = {
+			num: num,
+			station: station,
+			address: address
+		}
+		options = { body: params_h.to_json,
+			headers: { 'Content-Type' => 'application/json' }
+		}
 
-#logger.info "!!!!!!!!!!!!!!! #{request_url} #{options}"
-result = HTTParty.post(request_url, options)
-logger.info "@@@@@@@@@@@@ result  catch :#{result}"
-logger.info result.code
-if (result.code != 200)
-flash[:notice] = 'num not found'
-redirect '/tutorials'
-return nil
-end
-id = result.request.last_uri.path.split('/').last
-logger.info id
-session[:result] = result.to_json
-session[:num] = num
-session[:station] = station
-session[:address] = address
-session[:action] = :create
-redirect "/tutorials/#{id}"
-end
-get '/tutorials/:id' do
-if session[:action] == :create
-session[:action] = nil
-@results = JSON.parse(session[:result])
-@num = session[:num]
-@station = session[:station]
-@address = session[:address]
+	#logger.info "!!!!!!!!!!!!!!! #{request_url} #{options}"
+		result = HTTParty.post(request_url, options)
+		logger.info "@@@@@@@@@@@@ result  catch :#{result}"
+		logger.info result.code
 
-else
-request_url = "#{API_BASE_URI}/api/v2/tutorials/#{params[:id]}"
-options = { headers: { 'Content-Type' => 'application/json' } }
-result = HTTParty.get(request_url, options)
-@results = result
-end
-@id = params[:id]
-@action = :update
-haml :tutorials
-end
-delete '/tutorials/:id' do
-request_url = "#{API_BASE_URI}/api/v2/tutorials/#{params[:id]}"
-result = HTTParty.delete(request_url)
-flash[:notice] = 'record of tutorial deleted'
-redirect '/tutorials'
-end
+		if (result.code != 200)
+			flash[:notice] = 'num not found'
+			redirect '/tutorials'
+		return nil
+		end
+
+		id = result.request.last_uri.path.split('/').last
+		logger.info id
+		session[:result] = result.to_json
+		session[:num] = num
+		session[:station] = station
+		session[:address] = address
+		session[:action] = :create
+		redirect "/tutorials/#{id}"
+	end
+
+	get '/tutorials/:id' do
+		if session[:action] == :create
+			session[:action] = nil
+			@results = JSON.parse(session[:result])
+			@num = session[:num]
+			@station = session[:station]
+			@address = session[:address]
+
+		else
+			request_url = "#{API_BASE_URI}/api/v2/tutorials/#{params[:id]}"
+			options = { headers: { 'Content-Type' => 'application/json' } }
+			result = HTTParty.get(request_url, options)
+			@results = result
+		end
+
+		@id = params[:id]
+		@action = :update
+		haml :tutorials
+	end
+	
+	delete '/tutorials/:id' do
+		request_url = "#{API_BASE_URI}/api/v2/tutorials/#{params[:id]}"
+		result = HTTParty.delete(request_url)
+		flash[:notice] = 'record of tutorial deleted'
+		redirect '/tutorials'
+	end
 
 #end
 end
